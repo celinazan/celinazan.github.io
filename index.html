@@ -27,7 +27,7 @@
             <ons-toolbar-button
               onclick="fn.pushPage({'id': 'about.html', 'title': 'about'})"
             >
-              <ons-button modifier="light">About</ons-button>
+              <ons-button id="aboutButton" modifier="light">About</ons-button>
             </ons-toolbar-button>
           </div>
         </ons-toolbar>
@@ -61,6 +61,10 @@
           </div>
         </ons-card>
         <style>
+          #aboutButton {
+            background-color: #43484c;
+          }
+
           #topbar {
             background-color: #f99e1a;
           }
