@@ -1,122 +1,156 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-  <script src="functions.js"></script>
-</head>
-<body>
-  <ons-navigator id="navi">
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="functions.js"></script>
+  </head>
+  <body>
+    <ons-navigator id="navi">
       <ons-page>
-          <ons-toolbar>
-              <div class="center">Home</div>
-              <div class="right">
-                  <ons-toolbar-button onclick="fn.pushPage({'id': 'about.html', 'title': 'about'})">
-                    <ons-button modifier="light">About</ons-button>
-                  </ons-toolbar-button>
-                </div>
-          </ons-toolbar>
-      
-    <p class="intro">
-      Welcome to our app for viewing Overwatch heroes!<br><br>
-    </p>
+        <ons-toolbar>
+          <div class="center">Home</div>
+          <div class="right">
+            <ons-toolbar-button
+              onclick="fn.pushPage({'id': 'about.html', 'title': 'about'})"
+            >
+              <ons-button modifier="light">About</ons-button>
+            </ons-toolbar-button>
+          </div>
+        </ons-toolbar>
 
-    <ons-card onclick="fn.pushPage({'id': 'dmgHeroes.html', 'title': 'DmgHeroes'})">
-      <div class="title">Damage Heroes</div>
-      <div class="content">View the heroes made for dealing a lot of damage.</div>
-    </ons-card>
-    <ons-card onclick="fn.pushPage({'id': 'tankHeroes.html', 'title': 'TankHeroes'})">
-      <div class="title">Tank Heroes</div>
-      <div class="content">View the heroes with lots of health points.</div>
-    </ons-card>
-    <ons-card onclick="fn.pushPage({'id': 'supHeroes.html', 'title': 'SupHeroes'})">
-      <div class="title">Support heroes</div>
-      <div class="content">View the heroes that provide support and healing.</div>
-    </ons-card>
-    
-    <style>
-      .intro {
-        text-align: center;
-        padding: 0 20px;
-        margin-top: 40px;
-      }
+        <p class="intro">
+          Welcome to our app for viewing Overwatch heroes!<br /><br />
+        </p>
 
-      ons-card {
-        cursor: pointer;
-        color: #333;
-      }
+        <p class="intro">
+          Welcome to our app for viewing Overwatch heroes!<br /><br />
+        </p>
 
-      .card__title,
-      .card--material__title {
-        font-size: 20px;
-      }
-    </style>
-  </ons-page>
-</ons-navigator>
+        <ons-card
+          onclick="fn.pushPage({'id': 'dmgHeroes.html', 'title': 'DmgHeroes'})"
+        >
+          <div class="title">Damage Heroes</div>
+          <div class="content">
+            View the heroes made for dealing a lot of damage.
+          </div>
+        </ons-card>
+        <ons-card
+          onclick="fn.pushPage({'id': 'tankHeroes.html', 'title': 'TankHeroes'})"
+        >
+          <div class="title">Tank Heroes</div>
+          <div class="content">View the heroes with lots of health points.</div>
+        </ons-card>
+        <ons-card
+          onclick="fn.pushPage({'id': 'supHeroes.html', 'title': 'SupHeroes'})"
+        >
+          <div class="title">Support heroes</div>
+          <div class="content">
+            View the heroes that provide support and healing.
+          </div>
+        </ons-card>
 
-<ons-template id="dmgHeroes.html">
-    <ons-page>
-      <ons-toolbar>
-        <div class="left">
-          <ons-back-button>Back</ons-back-button>
-        </div>
-      </ons-toolbar>
-    </ons-page>
-  </ons-template>
+        <style>
+          .mercy {
+            float: right;
+          }
+          .intro {
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 40px;
+          }
 
-<ons-template id="tankHeroes.html">
-    <ons-page>
-      <ons-toolbar>
-        <div class="left">
-          <ons-back-button>Back</ons-back-button>
-        </div>
-      </ons-toolbar>
-    </ons-page>
-  </ons-template>
+          ons-card {
+            cursor: pointer;
+            color: #333;
+          }
 
-<ons-template id="supHeroes.html">
-    <ons-page>
-      <ons-toolbar>
-        <div class="left">
-          <ons-back-button>Back</ons-back-button>
-        </div>
-      </ons-toolbar>
-    </ons-page>
-  </ons-template>
+          .card__title,
+          .card--material__title {
+            font-size: 20px;
+          }
+        </style>
+      </ons-page>
+    </ons-navigator>
 
-<ons-template id="about.html">
+    <ons-template id="about.html">
       <ons-page>
         <ons-toolbar>
           <div class="left">
             <ons-back-button>Back</ons-back-button>
           </div>
-          <div class="center">About Us</div>
+          <div class="center">Damage Heroes</div>
         </ons-toolbar>
-        <p class="abouts">This app is brought to you by Team Cinos</p>
-        <p class="abouts">The app is made for browsing the different heroes of the game 'Overwatch', sorted 
-          by the categories Damage, Tank and Support. We hope you enjoy!
-        </p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Overwatch_circle_logo.svg/1024px-Overwatch_circle_logo.svg.png" alt="logo" width="100px" height="100px" class="overlogo">
-          
-      <style>
-        .abouts {
-          text-align: center;
-          padding: 0 20px;
-          margin-top: 40px;
-        }
+      </ons-page>
+    </ons-template>
+    <p class="abouts">This app is brought to you by Team Cinos</p>
+    <p class="abouts">
+      The app is made for browsing the different heroes of the game 'Overwatch',
+      sorted by the categories Damage, Tank and Support. We hope you enjoy!
+    </p>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Overwatch_circle_logo.svg/1024px-Overwatch_circle_logo.svg.png"
+      alt="logo"
+      width="100px"
+      height="100px"
+      class="overlogo"
+    />
 
-        .overlogo {
+    <style>
+      .abouts {
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 40px;
+      }
+
+      .overlogo {
           padding-top: 30px;
           display: block;
           margin-left: auto;
           margin-right: auto;
-        }
+      }
+    </style>
 
-      </style>
+    <ons-template id="tankHeroes.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left">
+            <ons-back-button>Back</ons-back-button>
+          </div>
+          <div class="center">Tank Heroes</div>
+        </ons-toolbar>
       </ons-page>
     </ons-template>
 
-</body>
+    <ons-template id="supHeroes.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left">
+            <ons-back-button>Back</ons-back-button>
+          </div>
+          <div class="center">Support Heroes</div>
+        </ons-toolbar>
+        <ons-card
+          onclick="fn.pushPage({'id': 'mercy.html', 'title': 'DmgHeroes'})"
+        >
+          <div class="title">Mercy</div>
+          <div class="content">
+            Binch
+          </div>
+          <div class="mercy">
+            <img
+              src="https://cdna.artstation.com/p/assets/images/images/000/292/680/20141109221508/smaller_square/mercy_presskit.jpg?1443930434"
+              alt="Mercy"
+              height="100px"
+              width="100px"
+            />
+          </div>
+        </ons-card>
+      </ons-page>
+    </ons-template>
+  </body>
 </html>
-
