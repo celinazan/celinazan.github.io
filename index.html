@@ -35,7 +35,7 @@
           Welcome to our app for viewing Overwatch heroes!<br /><br />
         </p>
 
-        <ons-card
+        <ons-card id="colouring"
           onclick="fn.pushPage({'id': 'dmgHeroes.html', 'title': 'DmgHeroes'})"
         >
           <div class="title">Damage Heroes</div>
@@ -43,7 +43,7 @@
             View the heroes made for dealing a lot of damage.
           </div>
         </ons-card>
-        <ons-card
+        <ons-card id="colouring"
           onclick="fn.pushPage({'id': 'tankHeroes.html', 'title': 'TankHeroes'})"
         >
           <div class="title">Tank Heroes</div>
@@ -51,7 +51,7 @@
             View the heroes with lots of health points that can soak up damage.
           </div>
         </ons-card>
-        <ons-card
+        <ons-card id="colouring"
           onclick="fn.pushPage({'id': 'supHeroes.html', 'title': 'SupHeroes'})"
         >
           <div class="title">Support heroes</div>
@@ -65,8 +65,12 @@
             background-color: #f99e1a;
           }
 
+          #colouring {
+            background-color: #A2CDFF;
+          }
+          
           .title {
-            font-family: Overwatch, Fallback, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-family: Overwatch;
           }
 
           .hero {
