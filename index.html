@@ -11,7 +11,9 @@
     <style>
       @font-face {
         font-family: Overwatch;
-        src: url(http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff);
+        src: url(http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff) format('woff'),
+             url(http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.ttf) format('truetype'),
+             url(http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff2) format('woff2');
       }
     </style>
   </head>
@@ -33,7 +35,7 @@
           Welcome to our app for viewing Overwatch heroes!<br /><br />
         </p>
 
-        <ons-card
+        <ons-card id="colouring"
           onclick="fn.pushPage({'id': 'dmgHeroes.html', 'title': 'DmgHeroes'})"
         >
           <div class="title">Damage Heroes</div>
@@ -41,7 +43,7 @@
             View the heroes made for dealing a lot of damage.
           </div>
         </ons-card>
-        <ons-card
+        <ons-card id="colouring"
           onclick="fn.pushPage({'id': 'tankHeroes.html', 'title': 'TankHeroes'})"
         >
           <div class="title">Tank Heroes</div>
@@ -49,7 +51,7 @@
             View the heroes with lots of health points that can soak up damage.
           </div>
         </ons-card>
-        <ons-card
+        <ons-card id="colouring"
           onclick="fn.pushPage({'id': 'supHeroes.html', 'title': 'SupHeroes'})"
         >
           <div class="title">Support heroes</div>
@@ -62,6 +64,10 @@
             background-color: #f99e1a;
           }
 
+          #colouring {
+            background-color: #218ffe;
+          }
+          
           .title {
             font-family: Overwatch;
           }
