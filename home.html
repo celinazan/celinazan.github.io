@@ -6,42 +6,46 @@
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
 </head>
 <body>
-        <ons-page>
-          <p class="intro">
-            Welcome to our app for viewing Overwatch heroes!<br><br>
-          </p>
+  <ons-page>
+      <ons-toolbar>
+          <div class="center">Home</div>
+      </ons-toolbar>
       
-          <ons-card onclick="fn.pushPage({'id': 'dmgHeroes.html', 'title': 'DmgHeroes'})">
-            <div class="title">Damage Heroes</div>
-            <div class="content">View the heroes made for dealing a lot of damage.</div>
-          </ons-card>
-          <ons-card onclick="fn.pushPage({'id': 'tankHeroes.html', 'title': 'TankHeroes'})">
-            <div class="title">Tank Heroes</div>
-            <div class="content">View the heroes with lots of health points.</div>
-          </ons-card>
-          <ons-card onclick="fn.pushPage({'id': 'supHeroeshtml', 'title': 'SupHeroes'})">
-            <div class="title">Support heroes</div>
-            <div class="content">View the heroes that provide support and healing.</div>
-          </ons-card>
-      
-          <style>
-            .intro {
-              text-align: center;
-              padding: 0 20px;
-              margin-top: 40px;
-            }
-      
-            ons-card {
-              cursor: pointer;
-              color: #333;
-            }
-      
-            .card__title,
-            .card--material__title {
-              font-size: 20px;
-            }
-          </style>
-        </ons-page>
+    <p class="intro">
+      Welcome to our app for viewing Overwatch heroes!<br><br>
+    </p>
+
+    <ons-card onclick="fn.pushPage({'id': 'dmgHeroes.html', 'title': 'DmgHeroes'})">
+      <div class="title">Damage Heroes</div>
+      <div class="content">View the heroes made for dealing a lot of damage.</div>
+    </ons-card>
+    <ons-card onclick="fn.pushPage({'id': 'tankHeroes.html', 'title': 'TankHeroes'})">
+      <div class="title">Tank Heroes</div>
+      <div class="content">View the heroes with lots of health points.</div>
+    </ons-card>
+    <ons-card onclick="fn.pushPage({'id': 'supHeroes.html', 'title': 'SupHeroes'})">
+      <div class="title">Support heroes</div>
+      <div class="content">View the heroes that provide support and healing.</div>
+    </ons-card>
+    
+    <style>
+      .intro {
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 40px;
+      }
+
+      ons-card {
+        cursor: pointer;
+        color: #333;
+      }
+
+      .card__title,
+      .card--material__title {
+        font-size: 20px;
+      }
+    </style>
+  </ons-page>
 </body>
 </html>
 
