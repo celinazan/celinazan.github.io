@@ -20,3 +20,8 @@ window.fn.pushPage = function (page, anim) {
     document.getElementById('navi').pushPage(page.id, { data: { title: page.title } });
   }
 };
+
+document.addEventListener('prechange', function(event) {
+    document.querySelector('ons-toolbar .center')
+      .innerHTML = event.tabItem.getAttribute('label');
+  });
