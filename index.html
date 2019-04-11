@@ -8,6 +8,12 @@
     />
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
     <script src="functions.js"></script>
+    <style>
+      @font-face {
+        font-family: Overwatch;
+        src: url(http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff);
+      }
+    </style>
   </head>
   <body>
     <ons-navigator id="navi">
@@ -53,6 +59,11 @@
         </ons-card>
 
         <style>
+
+          .title {
+            font-family: Overwatch;
+          }
+
           .hero {
             float: right;
           }
@@ -98,6 +109,7 @@
         />
 
         <style>
+
           .abouts {
             text-align: center;
             padding: 0 20px;
@@ -133,7 +145,7 @@
             </div>
             <div class="title">Pharah</div>
             <div class="content" width="200px">
-              Pharah flies above the map to deal damage from above. 
+              Pharah flies above the map to deal damage from above using her rocket launchers. 
             </div>
         </ons-card>
 
@@ -188,8 +200,7 @@
             </div>
             <div class="title">Zarya</div>
             <div class="content" width="200px">
-              Zarya uses her Particle Canon to deal damage and distribute shields. 
-            </div>
+              Zarya uses her Particle Canon to deal damage, and also give herself and teammates shields.
         </ons-card>
       </ons-page>
     </ons-template>
