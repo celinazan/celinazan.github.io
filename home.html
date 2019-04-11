@@ -5,13 +5,13 @@
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
   <script src="functions.js"></script>
-  
 </head>
 <body>
-  <ons-page>
-      <ons-toolbar>
-          <div class="center">Home</div>
-      </ons-toolbar>
+  <ons-navigator id="navi">
+      <ons-page>
+          <ons-toolbar>
+              <div class="center">Home</div>
+          </ons-toolbar>
       
     <p class="intro">
       Welcome to our app for viewing Overwatch heroes!<br><br>
@@ -48,6 +48,19 @@
       }
     </style>
   </ons-page>
+</ons-navigator>
+
+<ons-template id="dmgHeroes.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button>Back</ons-back-button>
+        </div>
+        <div class="center">Page 2</div>
+      </ons-toolbar>
+    </ons-page>
+  </ons-template>
+
 </body>
 </html>
 
