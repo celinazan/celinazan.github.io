@@ -20,7 +20,7 @@
   <body>
     <ons-navigator id="navi">
       <ons-page>
-        <ons-toolbar>
+        <ons-toolbar id="topbar">
           <div class="center">Home</div>
           <div class="right">
             <ons-toolbar-button
@@ -61,6 +61,9 @@
         </ons-card>
 
         <style>
+          #topbar {
+            background-color: #f99e1a;
+          }
 
           .title {
             font-family: Overwatch;
@@ -73,6 +76,10 @@
             text-align: center;
             padding: 0 20px;
             margin-top: 40px;
+          }
+
+          #navi {
+            background-color: #43484c;
           }
 
           ons-card {
@@ -152,18 +159,18 @@
         </ons-card>
 
         <ons-card style="height: 140px">
-            <div class="hero">
-              <img
-                src="https://d1u1mce87gyfbn.cloudfront.net/hero/bastion/hero-select-portrait.png"
-                alt="Bastion"
-                height="110px"
-                width="70px"
-              />
-            </div>
-            <div class="title">Bastion</div>
-            <div class="content" width="200px">
-              Bastion is a so-called omnic, and essentially functions as a turret. 
-            </div>
+          <div class="hero">
+            <img
+              src="https://d1u1mce87gyfbn.cloudfront.net/hero/bastion/hero-select-portrait.png"
+              alt="Bastion"
+              height="110px"
+              width="70px"
+            />
+          </div>
+          <div class="title">Bastion</div>
+          <div class="content" width="200px">
+            Bastion is a so-called omnic, and essentially functions as a turret.
+          </div>
         </ons-card>
       </ons-page>
     </ons-template>
@@ -224,23 +231,23 @@
           </div>
           <div class="title">Mercy</div>
           <div class="content" width="200px">
-            Mercy is a hero with high mobility and steady heals. 
+            Mercy is a hero with high mobility and steady heals.
           </div>
         </ons-card>
 
         <ons-card style="height: 140px">
-            <div class="hero">
-              <img
-                src="https://d1u1mce87gyfbn.cloudfront.net/hero/lucio/hero-select-portrait.png"
-                alt="Lucio"
-                height="110px"
-                width="70px"
-              />
-            </div>
-            <div class="title">Lúcio</div>
-            <div class="content" width="200px">
-              Lúcio is also a high mobility hero, and uses music for his healing.
-            </div>
+          <div class="hero">
+            <img
+              src="https://d1u1mce87gyfbn.cloudfront.net/hero/lucio/hero-select-portrait.png"
+              alt="Lucio"
+              height="110px"
+              width="70px"
+            />
+          </div>
+          <div class="title">Lúcio</div>
+          <div class="content" width="200px">
+            Lúcio is also a high mobility hero, and uses music for his healing.
+          </div>
         </ons-card>
       </ons-page>
     </ons-template>
