@@ -12,13 +12,13 @@
   <body>
     <ons-navigator id="navi">
       <ons-page>
-        <ons-toolbar id="topbar">
+        <ons-toolbar class="topbar">
           <div class="center">Home</div>
           <div class="right">
             <ons-toolbar-button
               onclick="fn.pushPage({'id': 'about.html', 'title': 'about'})"
             >
-              <ons-button modifier="light">About</ons-button>
+              <ons-button id="aboutButton" modifier="light">About</ons-button>
             </ons-toolbar-button>
           </div>
         </ons-toolbar>
@@ -52,8 +52,13 @@
           </div>
         </ons-card>
         <style>
-          #topbar {
+          .topbar {
             background-color: #f99e1a;
+          }
+
+          #aboutButton {
+            background-color: #43484c;
+            : #405275;
           }
 
           #colouring {
@@ -92,7 +97,7 @@
 
     <ons-template id="about.html">
       <ons-page>
-        <ons-toolbar>
+        <ons-toolbar class="topbar">
           <div class="left">
             <ons-back-button>Back</ons-back-button>
           </div>
@@ -132,7 +137,7 @@
 
     <ons-template id="dmgHeroes.html">
       <ons-page>
-        <ons-toolbar>
+        <ons-toolbar class="topbar">
           <div class="left">
             <ons-back-button>Back</ons-back-button>
           </div>
@@ -171,7 +176,7 @@
     </ons-template>
     <ons-template id="tankHeroes.html">
       <ons-page>
-        <ons-toolbar>
+        <ons-toolbar class="topbar">
           <div class="left">
             <ons-back-button>Back</ons-back-button>
           </div>
@@ -209,7 +214,7 @@
     </ons-template>
     <ons-template id="supHeroes.html">
       <ons-page>
-        <ons-toolbar>
+        <ons-toolbar class="topbar">
           <div class="left">
             <ons-back-button>Back</ons-back-button>
           </div>
