@@ -11,6 +11,11 @@
       <ons-page>
           <ons-toolbar>
               <div class="center">Home</div>
+              <div class="right">
+                  <ons-toolbar-button onclick="fn.pushPage({'id': 'about.html', 'title': 'about'})">
+                    <ons-button modifier="light">About</ons-button>
+                  </ons-toolbar-button>
+                </div>
           </ons-toolbar>
       
     <p class="intro">
@@ -56,12 +61,59 @@
         <div class="left">
           <ons-back-button>Back</ons-back-button>
         </div>
-        <div class="center">Page 2</div>
       </ons-toolbar>
     </ons-page>
   </ons-template>
 
+<ons-template id="tankHeroes.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button>Back</ons-back-button>
+        </div>
+      </ons-toolbar>
+    </ons-page>
+  </ons-template>
+
+<ons-template id="supHeroes.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button>Back</ons-back-button>
+        </div>
+      </ons-toolbar>
+    </ons-page>
+  </ons-template>
+
+<ons-template id="about.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left">
+            <ons-back-button>Back</ons-back-button>
+          </div>
+          <div class="center">About Us</div>
+        </ons-toolbar>
+        <p class="abouts">This app is brought to you by Team Cinos</p>
+        <p class="abouts">The app is made for browsing the different heroes of the game 'Overwatch', sorted 
+          by the categories Damage, Tank and Support. We hope you enjoy!
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Overwatch_circle_logo.svg/1024px-Overwatch_circle_logo.svg.png" alt="logo" width="100px" height="100px">
+        </p>
+          
+      
+      <style>
+        .abouts {
+          text-align: center;
+          padding: 0 20px;
+          margin-top: 40px;
+        }
+
+        img {
+          padding-top: 30px;
+        }
+      </style>
+      </ons-page>
+    </ons-template>
+
 </body>
 </html>
-
 
