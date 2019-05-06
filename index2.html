@@ -8,35 +8,36 @@
     />
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
     <script src="functions.js"></script>
-    <style>
-        @font-face {
-          font-family: Overwatch;
-          src: url(http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff) format('woff'),
-               url(http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.ttf) format('truetype'),
-               url(http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff2) format('woff2');
-        }
-      </style>
-  
   </head>
   <body>
     <ons-navigator id="navi">
       <ons-page>
-        <ons-toolbar class="topbar">
+        <ons-toolbar>
           <div class="center">Home</div>
           <div class="right">
             <ons-toolbar-button
               onclick="fn.pushPage({'id': 'about.html', 'title': 'about'})"
             >
-              <ons-button id="aboutButton" modifier="light">About</ons-button>
-            </ons-toolbar-button>
           </div>
         </ons-toolbar>
+
+
+        <ons-tabbar swipeable position="auto">
+                <ons-tab page="about.html" label="About" icon="md-home" active>
+                    </ons-tab>
+                <ons-tab page="dmgHeroes.html" label="Damage" icon="md-face" >
+                </ons-tab>
+                <ons-tab page="supHeroes.html" label="Support" icon="md-face" >
+                    </ons-tab>
+                <ons-tab page="tankHeroes.html" label="Tank" icon="md-face" >
+                    </ons-tab>
+            </ons-tabbar>
 
         <p class="intro">
           Welcome to our app for viewing Overwatch heroes!<br /><br />
         </p>
 
-        <ons-card id="colouring"
+        <ons-card
           onclick="fn.pushPage({'id': 'dmgHeroes.html', 'title': 'DmgHeroes'})"
         >
           <div class="title">Damage Heroes</div>
@@ -44,7 +45,7 @@
             View the heroes made for dealing a lot of damage.
           </div>
         </ons-card>
-        <ons-card id="colouring"
+        <ons-card
           onclick="fn.pushPage({'id': 'tankHeroes.html', 'title': 'TankHeroes'})"
         >
           <div class="title">Tank Heroes</div>
@@ -52,7 +53,7 @@
             View the heroes with lots of health points that can soak up damage.
           </div>
         </ons-card>
-        <ons-card id="colouring"
+        <ons-card
           onclick="fn.pushPage({'id': 'supHeroes.html', 'title': 'SupHeroes'})"
         >
           <div class="title">Support heroes</div>
@@ -60,31 +61,8 @@
             View the heroes that provide different forms of support and healing.
           </div>
         </ons-card>
+
         <style>
-          #aboutButton {
-            background-color: #43484c;
-          }
-
-          .topbar {
-            background-color: #f99e1a;
-          }
-
-          #colouring {
-            background-color: #218ffe;
-          }
-
-          #heroes {
-            background-color: #218ffe;
-          }
-          
-          .content {
-            font-size: 10pt;
-          }
-
-          .title {
-            font-family: Overwatch;
-          }
-
           .hero {
             float: right;
           }
@@ -109,10 +87,7 @@
 
     <ons-template id="about.html">
       <ons-page>
-        <ons-toolbar class="topbar">
-          <div class="left">
-            <ons-back-button>Back</ons-back-button>
-          </div>
+        <ons-toolbar>
           <div class="center">About Us</div>
         </ons-toolbar>
         <p class="abouts">This app is brought to you by Team Cinos</p>
@@ -130,7 +105,6 @@
         />
 
         <style>
-
           .abouts {
             text-align: center;
             padding: 0 20px;
@@ -149,13 +123,10 @@
 
     <ons-template id="dmgHeroes.html">
       <ons-page>
-        <ons-toolbar class="topbar">
-          <div class="left">
-            <ons-back-button>Back</ons-back-button>
-          </div>
+        <ons-toolbar>
           <div class="center">Damage Heroes</div>
         </ons-toolbar>
-        <ons-card style="height: 140px" id="heroes">
+        <ons-card style="height: 140px">
             <div class="hero">
               <img
                 src="https://d1u1mce87gyfbn.cloudfront.net/hero/pharah/hero-select-portrait.png"
@@ -166,35 +137,33 @@
             </div>
             <div class="title">Pharah</div>
             <div class="content" width="200px">
-              Pharah flies above the map to deal damage from above using her rocket launchers. 
+              Pharah flies above the map to deal damage from above. 
             </div>
         </ons-card>
 
-        <ons-card style="height: 140px" id="heroes">
-          <div class="hero">
-            <img
-              src="https://d1u1mce87gyfbn.cloudfront.net/hero/bastion/hero-select-portrait.png"
-              alt="Bastion"
-              height="110px"
-              width="70px"
-            />
-          </div>
-          <div class="title">Bastion</div>
-          <div class="content" width="200px">
-            Bastion is a so-called omnic, and essentially functions as a turret.
-          </div>
+        <ons-card style="height: 140px">
+            <div class="hero">
+              <img
+                src="https://d1u1mce87gyfbn.cloudfront.net/hero/bastion/hero-select-portrait.png"
+                alt="Bastion"
+                height="110px"
+                width="70px"
+              />
+            </div>
+            <div class="title">Bastion</div>
+            <div class="content" width="200px">
+              Bastion is a so-called omnic, and essentially functions as a turret. 
+            </div>
         </ons-card>
       </ons-page>
     </ons-template>
+
     <ons-template id="tankHeroes.html">
       <ons-page>
-        <ons-toolbar class="topbar">
-          <div class="left">
-            <ons-back-button>Back</ons-back-button>
-          </div>
+        <ons-toolbar>
           <div class="center">Tank Heroes</div>
         </ons-toolbar>
-        <ons-card style="height: 140px" id="heroes">
+        <ons-card style="height: 140px">
             <div class="hero">
               <img
                 src="https://d1u1mce87gyfbn.cloudfront.net/hero/dva/hero-select-portrait.png"
@@ -209,7 +178,7 @@
             </div>
         </ons-card>
 
-        <ons-card style="height: 140px" id="heroes">
+        <ons-card style="height: 140px">
             <div class="hero">
               <img
                 src="https://d1u1mce87gyfbn.cloudfront.net/hero/zarya/hero-select-portrait.png"
@@ -220,19 +189,18 @@
             </div>
             <div class="title">Zarya</div>
             <div class="content" width="200px">
-              Zarya uses her Particle Canon to deal damage, and also give herself and teammates shields.
+              Zarya uses her Particle Canon to deal damage and distribute shields. 
+            </div>
         </ons-card>
       </ons-page>
     </ons-template>
+
     <ons-template id="supHeroes.html">
       <ons-page>
-        <ons-toolbar class="topbar">
-          <div class="left">
-            <ons-back-button>Back</ons-back-button>
-          </div>
+        <ons-toolbar>
           <div class="center">Support Heroes</div>
         </ons-toolbar>
-        <ons-card style="height: 140px" id="heroes">
+        <ons-card style="height: 140px">
           <div class="hero">
             <img
               src="https://d1u1mce87gyfbn.cloudfront.net/hero/mercy/hero-select-portrait.png"
@@ -243,25 +211,27 @@
           </div>
           <div class="title">Mercy</div>
           <div class="content" width="200px">
-            Mercy is a hero with high mobility and steady heals.
+            Mercy is a hero with high mobility and steady heals. 
           </div>
         </ons-card>
 
-        <ons-card style="height: 140px" id="heroes">
-          <div class="hero">
-            <img
-              src="https://d1u1mce87gyfbn.cloudfront.net/hero/lucio/hero-select-portrait.png"
-              alt="Lucio"
-              height="110px"
-              width="70px"
-            />
-          </div>
-          <div class="title">Lúcio</div>
-          <div class="content" width="200px">
-            Lúcio is also a high mobility hero, and uses music for his healing.
-          </div>
+        <ons-card style="height: 140px">
+            <div class="hero">
+              <img
+                src="https://d1u1mce87gyfbn.cloudfront.net/hero/lucio/hero-select-portrait.png"
+                alt="Lucio"
+                height="110px"
+                width="70px"
+              />
+            </div>
+            <div class="title">Lúcio</div>
+            <div class="content" width="200px">
+              Lúcio is also a high mobility hero, and uses music for his healing.
+            </div>
         </ons-card>
       </ons-page>
     </ons-template>
   </body>
 </html>
+
+
